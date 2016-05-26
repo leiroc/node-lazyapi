@@ -3,6 +3,8 @@
 
 ##接口说明
 
+> 主机地址：HOST = 'http://v5cy.cn/core'
+
 注意：
 >带“可选”的是可选，不带的说明是必填项
 
@@ -18,7 +20,7 @@
 ```
 	
 	$.ajax({
-		url: '/us/save',
+		url: HOST + '/us/save',
 		data: {tabN: '表名', key1: '', key2: ''}
 	})
 
@@ -36,7 +38,7 @@
 ```
 	
 	$.ajax({
-		url: '/us/query',
+		url: HOST + '/us/query',
 		data: {tabN: '表名', PK: '指定主键值'}
 	})
 
@@ -47,7 +49,7 @@
 
 >三、带条件查找数据 （where条件查询）
 
-- 请求URL： /us/queryWhr 
+- 请求URL： HOST + /us/queryWhr 
 - 方式： post
 - 示例：
 
@@ -65,14 +67,14 @@
 
 >四、修改数据
 
-- 请求URL： /us/modify 
+- 请求URL： HOST + /us/modify 
 - 方式： post
 - 示例：
 
 ```
 	
 	$.ajax({
-		url: '/us/modify',
+		url: HOST + '/us/modify',
 		data: {tabN: '表名', PK: '指定修改的主键值',key1: '要修改的值', key2: '要修改的值'}
 	})
 
@@ -91,7 +93,7 @@
 ```
 	
 	$.ajax({
-		url: '/us/delete',
+		url: HOST + '/us/delete',
 		data: {tabN: '表名', PK: '指定删除的主键值'}
 	})
 
@@ -109,7 +111,7 @@
 ```
 	
 	$.ajax({
-		url: '/us/sort',
+		url: HOST + '/us/sort',
 		data: {tabN: '表名', topN: '一次获取数据长度，int 型', whr: '按条件查询(可选)', orderBy: '按照字段排序（可选）', orderType: '排序方式： asc|desc（可选）'}
 	})
 
@@ -127,7 +129,7 @@
 ```
 	
 	$.ajax({
-		url: '/us/sort/me',
+		url: HOST + '/us/sort/me',
 		data: {tabN: '表名',PK: '主键值', orderBy: '按照字段排序', orderType: '排序方式： asc|desc'}
 	})
 
@@ -146,7 +148,7 @@
 ```
 	
 	$.ajax({
-		url: '/us/sort/page',
+		url: HOST + '/us/sort/page',
 		data: {tabN: '表名',pageNo: '当前页数',  topN: '一次获取数据长度，int 型', whr: '按条件查询(可选)', orderBy: '按照字段排序（可选）', orderType: '排序方式： asc|desc（可选）'}
 	})
 
@@ -165,7 +167,7 @@
 ```
 	
 	$.ajax({
-		url: '/us/count',
+		url: HOST + '/us/count',
 		data: {tabN: '表名',whr: '按条件查询(可选)'}
 	})
 
